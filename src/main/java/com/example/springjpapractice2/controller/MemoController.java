@@ -38,4 +38,9 @@ public class MemoController {
 
         return ResponseEntity.ok(memoService.update(id, dto));
     }
+
+    @DeleteMapping("/memos/{id}")
+    public void delete(@PathVariable Long id) {
+        memoService.deleteById(id);
+    }
 }
